@@ -1,0 +1,37 @@
+
+<%= form_for @user, :url => {:controller => :admin,:action => :upload_avatar},:html => {:multipart => true, :remote => true , :id => "form_uploadAvatar"} do |form| %>
+
+    <%= form.file_field :avatar %>
+
+<% end %>
+
+<button  class="groovy_att_button" id="btn_uploadAvatar">Upload Avatar</button>
+
+
+<div id="avatar_display">
+
+  <%= render :partial => 'partials/admin/avatar' -%>
+
+</div>
+
+
+<script type="text/javascript" xmlns="http://www.w3.org/1999/html">
+
+    $(document).ready(function () {
+
+        $('#btn_uploadAvatar').click(function(event) {
+
+            $('#form_uploadAvatar').ajaxSubmit({
+                data:{edit_true: "false"},
+                success: function(data) {
+
+                    $('#avatar_display').html(data).fadeIn("slow");
+
+                }
+            });
+
+        });
+
+    });
+
+</script>
