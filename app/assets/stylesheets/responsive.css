@@ -194,8 +194,7 @@
 	.sti-menu { padding-left:16px; width:452px;}
 	.sti-menu li {width: 226px; height:300px;}
 	
-	.column, .column36, .column48, .column60
-	 {margin-right:0px; !important; width:100% !important;}
+
 	.column img, .column36 img, .column48 img, .column60 img
 	 {max-width:100% !important;}
 	 .column .nivoSlider img, .column36 .nivoSlider img, .column48 .nivoSlider img, .column60 .nivoSlider img
