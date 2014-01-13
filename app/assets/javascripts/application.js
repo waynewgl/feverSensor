@@ -31,7 +31,7 @@
 //= require swfobject
 //= require jquery.tooltipster.min
 //= require jquery.form.min
-// require jquery.bpopup-0.9.0.min
+//= require jquery.bpopup-0.9.0.min
 
 
 
