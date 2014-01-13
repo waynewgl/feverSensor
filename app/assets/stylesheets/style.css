@@ -119,6 +119,21 @@ a.logo {
     background: #136899;
 }
 
+#login_form {
+
+    background-color:transparent;
+    border-radius:15px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+
+
+
+
+
 /* middle */
 
 .middle_silver_background{
