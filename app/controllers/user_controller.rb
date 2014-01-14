@@ -5,43 +5,18 @@ class UserController < ApplicationController
 
   def index
 
-
     user_post = User.find_by_id(1).posts
-
-
     for post in user_post
 
       logger.info "now we have the post #{post.content}"
-
     end
-
   end
 
-
-  def show
-
-    user = User.find_by_id(params[:id])
-
-    if user
-
-      post = user.posts
-      render :json => post.to_json
-    else
-
-      message = Hash.new
-      message[:code] = "222"
-      message[:description] = "找不到该用户"
-      render :json => message.to_json
-    end
-
-  end
 
 
   def getUser
 
-
     user_post = User.find_by_id(1).posts
-
     render :json => user_post.to_json
   end
 
@@ -61,15 +36,52 @@ class UserController < ApplicationController
       description:“成功”
     }
 
-    否则返回
+    注册失败 返回
     {
       code:222
       description:“用户注册失败”
     }
+
+    参数缺少 返回
+    {
+      code:223
+      description:“缺少必须参数”
+    }
+
   EOS
 
   def register
 
+    msg = Hash.new
+
+    if params[:account].nil? || params[:password].nil?  || params[:token].nil?
+
+      msg[:code] = 233
+      msg[:description] = "缺少参数: account 或者 password 或者 token"
+      render :json =>  msg.to_json
+
+    else
+
+      new_user = User.new
+      new_user.account = params[:account]
+      new_user.password = params[:password]
+      new_user.token = params[:token]
+
+      if new_user.save
+
+        msg[:code] = 200
+        msg[:user_id] = new_user.id
+        msg[:description] = "用户注册成功"
+        render :json =>  msg.to_json
+
+      else
+
+        msg[:code] = 222
+        msg[:description] = "用户注册失败"
+        render :json =>  msg.to_json
+      end
+
+    end
 
 
   end
