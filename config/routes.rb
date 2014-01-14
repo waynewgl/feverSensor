@@ -1,4 +1,6 @@
 FunnyRLife::Application.routes.draw do
+  apipie
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,11 +50,16 @@ FunnyRLife::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'main#index'
 
-  match 'main/index' => 'main#index'
-  match 'main/user_login' => 'main#user_login'
-  match 'main/getUser' => 'main#getUser'
+  resources :user
+
+
+  root :to => 'user#index'
+
+  match 'user/index' => 'user#index'
+  match 'user/user_login' => 'user#user_login'
+  match 'user/getUser' => 'user#getUser'
+  match 'user/register' => 'user#register'
 
   match 'admin/index' => 'admin#index'
   match 'admin/upload_avatar' => 'admin#upload_avatar'
