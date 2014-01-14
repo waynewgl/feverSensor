@@ -51,6 +51,9 @@ FunnyRLife::Application.routes.draw do
   root :to => 'main#index'
 
   match 'main/index' => 'main#index'
+  match 'main/user_login' => 'main#user_login'
+  match 'main/getUser' => 'main#getUser'
+
   match 'admin/index' => 'admin#index'
   match 'admin/upload_avatar' => 'admin#upload_avatar'
 

@@ -8,4 +8,15 @@ class User < ActiveRecord::Base
                     :url => "/upload/paperclip/:class/user/:id/:style_:basename.:extension"  ,
                     :path => ":rails_root/public/upload/paperclip/:class/user/:id/:style_:basename.:extension"
 
+
+  def as_json(options={})
+    {
+        id: self.id,
+        first_name: self.firstName,
+        last_name: self.lastName
+    }
+  end
+
+
+
 end
