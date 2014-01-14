@@ -1,0 +1,114 @@
+[ 2014-01-10 15:16:05.9179 10168/7fd99279b740 agents/Watchdog/Main.cpp:516 ]: Options: { 'analytics_log_user' => 'root', 'cleanup_pidfiles' => 'L3RtcC9wYXNzZW5nZXItc3RhbmRhbG9uZS4xcWxzeWl3L3RlbXBfZGlyX3RvdWNoZXIucGlk', 'default_group' => 'root', 'default_python' => 'python', 'default_ruby' => '/usr/local/rvm/wrappers/ruby-1.9.3-p448@fl/ruby', 'default_user' => 'root', 'log_level' => '0', 'max_pool_size' => '6', 'passenger_root' => '/tmp/passenger-standalone.1qlsyiw/locations.ini', 'passenger_version' => '4.0.33', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzEyNy4wLjAuMTozNTU1AA==', 'temp_dir' => '/tmp', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'false', 'web_server_passenger_version' => '4.0.33', 'web_server_pid' => '10167', 'web_server_type' => 'nginx', 'web_server_worker_gid' => '0', 'web_server_worker_uid' => '0' }
+[ 2014-01-10 15:16:05.9246 10171/7feb342ef740 agents/HelperAgent/Main.cpp:636 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger.1.0.10167/generation-0/request
+[ 2014-01-10 15:16:05.9314 10176/7f40de756740 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger.1.0.10167/generation-0/logging
+[ 2014-01-10 15:16:05.9333 10168/7fd99279b740 agents/Watchdog/Main.cpp:703 ]: All Phusion Passenger agents started!
+App 10209 stderr: stdin: is not a tty
+App 10209 stdout: 
+App 10209 stderr:         SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+App 10209 stderr:         This poses a security threat. It is strongly recommended that you
+App 10209 stderr:         provide a secret to prevent exploits that may be possible from crafted
+App 10209 stderr:         cookies. This will not be supported in future versions of Rack, and
+App 10209 stderr:         future versions will even invalidate your existing user cookies.
+App 10209 stderr: 
+App 10209 stderr:         Called from: /usr/local/rvm/gems/ruby-1.9.3-p448@fl/gems/actionpack-3.2.9/lib/action_dispatch/middleware/session/abstract_store.rb:28:in `initialize'.
+App 10209 stderr: 
+[ 2014-01-10 15:16:10.0678 10171/7feb341f8700 Pool2/SmartSpawner.h:301 ]: Preloader for /var/www/app/feverSensor started on PID 10209, listening on unix:/tmp/passenger.1.0.10167/generation-0/backends/preloader.10209
+App 10249 stdout: 
+App 10270 stdout: 
+App 10429 stdout: 
+App 10447 stdout: 
+App 10629 stdout: 
+App 10655 stdout: 
+App 11645 stderr: stdin: is not a tty
+App 11645 stdout: 
+App 11645 stderr:         SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+App 11645 stderr:         This poses a security threat. It is strongly recommended that you
+App 11645 stderr:         provide a secret to prevent exploits that may be possible from crafted
+App 11645 stderr:         cookies. This will not be supported in future versions of Rack, and
+App 11645 stderr:         future versions will even invalidate your existing user cookies.
+App 11645 stderr: 
+App 11645 stderr:         Called from: /usr/local/rvm/gems/ruby-1.9.3-p448@fl/gems/actionpack-3.2.9/lib/action_dispatch/middleware/session/abstract_store.rb:28:in `initialize'.
+App 11645 stderr: 
+[ 2014-01-10 15:31:32.1502 10171/7feb34239700 Pool2/SmartSpawner.h:301 ]: Preloader for /var/www/app/feverSensor started on PID 11645, listening on unix:/tmp/passenger.1.0.10167/generation-0/backends/preloader.11645
+App 11710 stdout: 
+App 12143 stdout: 
+App 12787 stdout: 
+App 12959 stdout: 
+App 13287 stdout: 
+App 15730 stderr: stdin: is not a tty
+App 15730 stdout: 
+App 15730 stderr:         SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+App 15730 stderr:         This poses a security threat. It is strongly recommended that you
+App 15730 stderr:         provide a secret to prevent exploits that may be possible from crafted
+App 15730 stderr:         cookies. This will not be supported in future versions of Rack, and
+App 15730 stderr:         future versions will even invalidate your existing user cookies.
+App 15730 stderr: 
+App 15730 stderr:         Called from: /usr/local/rvm/gems/ruby-1.9.3-p448@fl/gems/actionpack-3.2.9/lib/action_dispatch/middleware/session/abstract_store.rb:28:in `initialize'.
+App 15730 stderr: 
+[ 2014-01-10 16:14:20.7145 10171/7feb31024700 Pool2/SmartSpawner.h:301 ]: Preloader for /var/www/app/feverSensor started on PID 15730, listening on unix:/tmp/passenger.1.0.10167/generation-0/backends/preloader.15730
+App 15783 stdout: 
+App 22163 stderr: stdin: is not a tty
+App 22163 stdout: 
+App 22163 stderr:         SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+App 22163 stderr:         This poses a security threat. It is strongly recommended that you
+App 22163 stderr:         provide a secret to prevent exploits that may be possible from crafted
+App 22163 stderr:         cookies. This will not be supported in future versions of Rack, and
+App 22163 stderr:         future versions will even invalidate your existing user cookies.
+App 22163 stderr: 
+App 22163 stderr:         Called from: /usr/local/rvm/gems/ruby-1.9.3-p448@fl/gems/actionpack-3.2.9/lib/action_dispatch/middleware/session/abstract_store.rb:28:in `initialize'.
+App 22163 stderr: 
+[ 2014-01-10 17:18:19.5081 10171/7feb341f8700 Pool2/SmartSpawner.h:301 ]: Preloader for /var/www/app/feverSensor started on PID 22163, listening on unix:/tmp/passenger.1.0.10167/generation-0/backends/preloader.22163
+App 22209 stdout: 
+App 1324 stderr: stdin: is not a tty
+App 1324 stdout: 
+App 1324 stderr:         SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+App 1324 stderr:         This poses a security threat. It is strongly recommended that you
+App 1324 stderr:         provide a secret to prevent exploits that may be possible from crafted
+App 1324 stderr:         cookies. This will not be supported in future versions of Rack, and
+App 1324 stderr:         future versions will even invalidate your existing user cookies.
+App 1324 stderr: 
+App 1324 stderr:         Called from: /usr/local/rvm/gems/ruby-1.9.3-p448@fl/gems/actionpack-3.2.9/lib/action_dispatch/middleware/session/abstract_store.rb:28:in `initialize'.
+App 1324 stderr: 
+[ 2014-01-11 11:28:22.6801 10171/7feb30fa2700 Pool2/SmartSpawner.h:301 ]: Preloader for /var/www/app/feverSensor started on PID 1324, listening on unix:/tmp/passenger.1.0.10167/generation-0/backends/preloader.1324
+App 1370 stdout: 
+App 1716 stdout: 
+App 1898 stdout: 
+App 2860 stderr: stdin: is not a tty
+App 2860 stdout: 
+App 2860 stderr:         SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+App 2860 stderr:         This poses a security threat. It is strongly recommended that you
+App 2860 stderr:         provide a secret to prevent exploits that may be possible from crafted
+App 2860 stderr:         cookies. This will not be supported in future versions of Rack, and
+App 2860 stderr:         future versions will even invalidate your existing user cookies.
+App 2860 stderr: 
+App 2860 stderr:         Called from: /usr/local/rvm/gems/ruby-1.9.3-p448@fl/gems/actionpack-3.2.9/lib/action_dispatch/middleware/session/abstract_store.rb:28:in `initialize'.
+App 2860 stderr: 
+[ 2014-01-11 11:40:23.0056 10171/7feb30f3d700 Pool2/SmartSpawner.h:301 ]: Preloader for /var/www/app/feverSensor started on PID 2860, listening on unix:/tmp/passenger.1.0.10167/generation-0/backends/preloader.2860
+App 2910 stdout: 
+App 3297 stdout: 
+App 3858 stdout: 
+App 4131 stdout: 
+App 5333 stderr: stdin: is not a tty
+App 5333 stdout: 
+App 5333 stderr:         SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+App 5333 stderr:         This poses a security threat. It is strongly recommended that you
+App 5333 stderr:         provide a secret to prevent exploits that may be possible from crafted
+App 5333 stderr:         cookies. This will not be supported in future versions of Rack, and
+App 5333 stderr:         future versions will even invalidate your existing user cookies.
+App 5333 stderr: 
+App 5333 stderr:         Called from: /usr/local/rvm/gems/ruby-1.9.3-p448@fl/gems/actionpack-3.2.9/lib/action_dispatch/middleware/session/abstract_store.rb:28:in `initialize'.
+App 5333 stderr: 
+[ 2014-01-11 11:54:46.4511 10171/7feb30f3d700 Pool2/SmartSpawner.h:301 ]: Preloader for /var/www/app/feverSensor started on PID 5333, listening on unix:/tmp/passenger.1.0.10167/generation-0/backends/preloader.5333
+App 5381 stdout: 
+App 7263 stderr: stdin: is not a tty
+App 7263 stdout: 
+App 7263 stderr:         SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+App 7263 stderr:         This poses a security threat. It is strongly recommended that you
+App 7263 stderr:         provide a secret to prevent exploits that may be possible from crafted
+App 7263 stderr:         cookies. This will not be supported in future versions of Rack, and
+App 7263 stderr:         future versions will even invalidate your existing user cookies.
+App 7263 stderr: 
+App 7263 stderr:         Called from: /usr/local/rvm/gems/ruby-1.9.3-p448@fl/gems/actionpack-3.2.9/lib/action_dispatch/middleware/session/abstract_store.rb:28:in `initialize'.
+App 7263 stderr: 
+[ 2014-01-12 09:39:38.1277 10171/7feb310a6700 Pool2/SmartSpawner.h:301 ]: Preloader for /var/www/app/feverSensor started on PID 7263, listening on unix:/tmp/passenger.1.0.10167/generation-0/backends/preloader.7263
+App 7307 stdout: 
