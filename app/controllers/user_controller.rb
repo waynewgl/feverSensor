@@ -14,6 +14,29 @@ class UserController < ApplicationController
 
 
 
+  def  dev_pushTest
+
+    content = params[:content].nil? ? "development environment testing":params[:content]
+    certificate =   "certificate.pem"
+    devicetoken =   "775382506cb9518b407027a1415a415a543238dfe597fbf2a123b13da73ae879"
+    environment = "development"
+    pushNotification(certificate, devicetoken, environment, content)
+
+  end
+
+
+  def  pro_pushTest
+
+    content = params[:content].nil? ? "production environment testing":params[:content]
+    certificate =   "pro_certificate.pem"
+    devicetoken =   "b90818897de3ed29c984c098b4fbfe0ccf6d3b876e9f40556109174475b74b3f"
+    environment = "production"
+    pushNotification(certificate, devicetoken, environment, content)
+
+  end
+
+
+
   def getUser
 
     user_post = User.find_by_id(1).posts

@@ -60,6 +60,8 @@ FunnyRLife::Application.routes.draw do
   match 'user/user_login' => 'user#user_login'
   match 'user/getUser' => 'user#getUser'
   match 'user/register' => 'user#register'
+  match 'user/dev_pushTest' => 'user#dev_pushTest'
+  match 'user/pro_pushTest' => 'user#pro_pushTest'
 
   match 'admin/index' => 'admin#index'
   match 'admin/upload_avatar' => 'admin#upload_avatar'
