@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
 
   has_many :posts
+  has_many :fevers
+
   attr_accessible :frstName, :lastName, :avatar
 
 
