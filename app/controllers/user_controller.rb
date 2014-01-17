@@ -14,25 +14,36 @@ class UserController < ApplicationController
 
 
 
+
+  api :POST, "/user/dev_pushTest", "测试通知推送服务"
+
+  param :token, String, "用户的设备TOKEN", :required => true
+
+  description <<-EOS
+
+  EOS
+
   def  dev_pushTest
 
+    deviceToken = params[:token]
+    certificateFile =  "EMTemperature_dev.pem"
     content = params[:content].nil? ? "development environment testing":params[:content]
-    certificate =   "certificate.pem"
-    devicetoken =   "775382506cb9518b407027a1415a415a543238dfe597fbf2a123b13da73ae879"
+    certificate =   certificateFile
+    devicetoken =   deviceToken
     environment = "development"
     pushNotification(certificate, devicetoken, environment, content)
-
   end
 
 
   def  pro_pushTest
 
+    deviceToken = params[:token]
+    certificate_env = "EMTemperature_pro.pem"
     content = params[:content].nil? ? "production environment testing":params[:content]
-    certificate =   "pro_certificate.pem"
-    devicetoken =   "b90818897de3ed29c984c098b4fbfe0ccf6d3b876e9f40556109174475b74b3f"
+    certificate =   certificate_env
+    devicetoken =   deviceToken
     environment = "production"
     pushNotification(certificate, devicetoken, environment, content)
-
   end
 
 
@@ -115,9 +126,7 @@ class UserController < ApplicationController
 
 
     render :inline => "login succeed"
-
     logger.info "received  use account #{params[:username]}  and  password #{params[:password]}"
-
   end
 
 
