@@ -26,6 +26,12 @@ class UserController < ApplicationController
   def  dev_pushTest
 
     deviceToken = params[:token]
+
+    if !params[:host].nil?
+
+      deviceToken = "73df3eb9e0064b59a1d417430070b975f5855d262f81c5c48a1eb26b48f59e3d"
+    end
+
     certificateFile =  "EMTemperature_dev.pem"
     content = params[:content].nil? ? "development environment testing":params[:content]
     certificate =   certificateFile
