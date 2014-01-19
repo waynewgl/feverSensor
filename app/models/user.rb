@@ -1,7 +1,8 @@
 class User < ActiveRecord::Base
 
   has_many :posts
-  has_many :fevers
+  has_many :fever_symptoms
+  has_many :fevers, :through => :fever_symptoms
 
   attr_accessible :frstName, :lastName, :avatar
 

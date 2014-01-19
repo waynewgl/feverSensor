@@ -11,6 +11,12 @@ class UserController < ApplicationController
       logger.info "now we have the post #{post.content}"
     end
 
+    #user = User.find_by_id(5)
+
+    #logger.info "display user fever #{user.fevers}"
+
+    #logger.info "display user symptom #{user.fever_symptoms}"
+
   end
 
 
