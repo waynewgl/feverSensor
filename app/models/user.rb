@@ -1,6 +1,18 @@
 class User < ActiveRecord::Base
 
+  #has_many :fever_symptoms
+  #has_many :fevers, :through => :fever_symptoms
+
   has_many :posts
+  has_many :favoriates
+  has_many :followers
+  has_many :black_lists
+  has_many :nicknames
+  has_many :locations
+  has_many :record_groups
+
+  attr_accessible :firstName, :lastName, :avatar , :avatar_content_type, :avatar_file_name, :avatar_file_size, :avatar_updated_at
+
   has_many :fever_symptoms
   has_many :fevers, :through => :fever_symptoms
 
@@ -16,10 +28,22 @@ class User < ActiveRecord::Base
     {
         id: self.id,
         first_name: self.firstName,
+        last_name: self.lastName,
+        email: self.email,
+        sex: self.sex,
+        age: self.age,
+        mood: self.mood,
+        image_url: self.avatar.url,
         last_name: self.lastName
     }
   end
 
 
+  def generate_token
+    self.passport_token = loop do
+      random_token = SecureRandom.urlsafe_base64(nil, false)
+      break random_token unless User.exists?(passport_token: random_token)
+    end
+  end
 
 end

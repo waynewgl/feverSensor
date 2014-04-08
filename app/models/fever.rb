@@ -1,4 +1,9 @@
 class Fever < ActiveRecord::Base
+
+  attr_accessible :description, :suggestion, :type, :user_id
+
+  has_many :fever_symptoms
+  has_many :users, :through => :fever_symptoms
   attr_accessible :description, :suggestion, :type, :user_id
 
   belongs_to :users
