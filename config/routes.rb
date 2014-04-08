@@ -49,6 +49,7 @@ FunnyRLife::Application.routes.draw do
   #   end
 
   # You can have the root of your site routed with "root"
+
   # just remember to delete public/index.html.
 
   #resources :user
@@ -63,8 +64,36 @@ FunnyRLife::Application.routes.draw do
   match 'user/dev_pushTest' => 'user#dev_pushTest'
   match 'user/pro_pushTest' => 'user#pro_pushTest'
 
+  match 'user/upload_avatar_ios' => 'user#upload_avatar_ios'
+  match 'user/userFavoriatePost' => 'user#userFavoriatePost'
+  match 'user/updateProfile' => 'user#updateProfile'
+  match 'user/followUser' => 'user#followUser'
+  match 'user/cancelFollowUser' => 'user#cancelFollowUser'
+  match 'user/blackList' => 'user#blackList'
+  match 'user/removeBlackList' => 'user#removeBlackList'
+  match 'user/updateLocation' => 'user#updateLocation'
+  match 'user/userNickname' => 'user#userNickname'
+
+  match 'post/listUserPosts' => 'post#listUserPosts'
+  match 'post/createPost' => 'post#createPost'
+  match 'post/getSpecificPost' => 'post#getSpecificPost'
+  match 'post/searchPost' => 'post#searchPost'
+  match 'post/addAttachment' => 'post#addAttachment'
+  match 'post/deleteAttachment' => 'post#deleteAttachment'
+  match 'post/listPostComments' => 'post#listPostComments'
+
+  match 'comment/createComment' => 'comment#createComment'
+  match 'comment/addAttachment' => 'comment#addAttachment'
+  match 'comment/deleteAttachment' => 'comment#deleteAttachment'
+
+  match 'record/addRecordGroup' => 'comment#addRecordGroup'
+  match 'record/addRecordTemperature' => 'comment#addRecordTemperature'
+
+
   match 'admin/index' => 'admin#index'
   match 'admin/upload_avatar' => 'admin#upload_avatar'
+  match 'admin/upload_avatar_ios' => 'admin#upload_avatar_ios'
+
 
   # See how all your routes lay out with "rake routes"
 
