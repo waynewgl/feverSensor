@@ -45,4 +45,27 @@ class ApplicationController < ActionController::Base
   end
 
 
+
+  def checkUserExistence (user_id, passport_token)
+
+    msg = Hash.new
+
+    user = User.find_by_id(user_id)
+
+    if user.nil?
+
+      msg[:response] =CodeHelper.CODE_USER_NOT_EXIST
+      msg[:description] = "该用户不存在"
+      return msg
+    else
+
+      if user.passport_token !=  passport_token
+
+        msg[:response] =CodeHelper.CODE_TOKEN_NOT_EXIST
+        msg[:description] = "用户TOKEN不存在或者失效"
+        return  msg
+      end
+    end
+  end
+
 end
