@@ -13,7 +13,7 @@ class PostAttachment < ActiveRecord::Base
   def as_json(options={})
     {
         id: self.id,
-        attachments: self.image.url(:content)
+        image_url: self.image.url(:content)
     }
   end
 

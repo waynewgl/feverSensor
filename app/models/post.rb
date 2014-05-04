@@ -13,9 +13,18 @@ class Post < ActiveRecord::Base
         content: self.content,
         author: self.author,
         date: self.date,
+        attachment: getLatestAttachment
         #comments: self.comments,
         #attachment: self.post_attachments
     }
+  end
+
+
+
+  def  getLatestAttachment
+
+    return self.post_attachments.first;
+
   end
 
 end
