@@ -452,6 +452,7 @@ class PostController < ApplicationController
     返回成功 返回：
     {
       response: #{CodeHelper.CODE_SUCCESS}
+      att_id: 1
       description:“成功”
     }
 
@@ -519,10 +520,19 @@ class PostController < ApplicationController
       return
     else
 
-      attach = PostAttachment.new
-      attach.post_id = params[:post_id]
-      attach.update_attributes(:image => params[:image])
-      attach.note = params[:note]
+      attach = PostAttachment.where(:post_id => params[:post_id]).first
+
+      if attach.nil?
+
+        attach = PostAttachment.new
+        attach.post_id = params[:post_id]
+        attach.update_attributes(:image => params[:image])
+        attach.note = params[:note]
+      else
+
+        attach.update_attributes(:image => params[:image])
+        attach.note = params[:note]
+      end
 
       if attach.save
 
