@@ -60,7 +60,7 @@ class PostController < ApplicationController
         return
       end
 
-      post = user.posts
+      post = user.posts.order("updated_at desc")
       msg[:response] = CodeHelper.CODE_SUCCESS
       msg[:posts] = post
       msg[:description] = "成功"

@@ -12,7 +12,7 @@ class Post < ActiveRecord::Base
         title: self.title,
         content: self.content,
         author: self.author,
-        date: self.date,
+        date: self.updated_at,
         attachment: getLatestAttachment
         #comments: self.comments,
         #attachment: self.post_attachments
@@ -23,7 +23,14 @@ class Post < ActiveRecord::Base
 
   def  getLatestAttachment
 
-    return self.post_attachments.first;
+    if self.post_attachments.first.nil?
+
+      return "";
+    else
+
+      return self.post_attachments.first;
+    end
+
 
   end
 
