@@ -528,10 +528,12 @@ class PostController < ApplicationController
         attach.post_id = params[:post_id]
         attach.update_attributes(:image => params[:image])
         attach.note = params[:note]
+        attach.image_height = params[:image_height]
       else
 
         attach.update_attributes(:image => params[:image])
         attach.note = params[:note]
+        attach.image_height = params[:image_height]
       end
 
       if attach.save
